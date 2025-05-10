@@ -49,8 +49,6 @@ export default async function Home() {
   
 
 
-
-
     <div>
       {isMobile ? <MobileSlidesMovies data={PopularMovies} title={"Popular on Netflix"} /> : <MovieSlides data={PopularMovies} title={"Popular on Netflix"} /> }
     </div>

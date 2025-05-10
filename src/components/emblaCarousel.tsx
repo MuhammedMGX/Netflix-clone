@@ -802,7 +802,7 @@ export function MobilePostersSlides({ data , title }: { data: dataInfo , title: 
     <div className="mt-5 ps-3 lg:mt-10 w-full bg-transparent select-none" >
       <h2 className='text-white md:text-base font-semibold mb-2 ms-1'>{title}</h2>
 
-      <div className="embla relative">
+      <div className="overflow-hidden relative">
 
 
         <div className='embla__viewport overflow-hidden ' ref={emblaRef}>
@@ -1103,7 +1103,7 @@ export function MobileTop10SlidesMovies({ data , title }: { data: dataInfo , tit
     <div className="mt-5 lg:mt-10 w-full bg-transparent select-none" >
       <h2 className='text-white md:text-base font-semibold mb-2 ms-5'>{title}</h2>
 
-      <div className="embla relative">
+      <div className="overflow-hidden relative">
 
 
         <div className='embla__viewport overflow-hidden ' ref={emblaRef}>
@@ -1211,7 +1211,7 @@ export function MobileTop10SlidesTV({ data , title }: { data: dataInfo , title: 
     <div className="mt-5 lg:mt-10 w-full bg-transparent select-none" >
       <h2 className='text-white md:text-base font-semibold mb-2 ms-5'>{title}</h2>
 
-      <div className="embla relative">
+      <div className="overflow-hidden relative">
 
 
         <div className='embla__viewport overflow-hidden ' ref={emblaRef}>
@@ -1310,7 +1310,7 @@ export function Top10LandingPage({ data , title }: { data: dataInfo , title: str
     <div className="px-10 w-full bg-transparent select-none" >
       <h2 className='text-white md:text-2xl font-bold mb-2'>{title}</h2>
 
-      <div className="embla relative">
+      <div className="overflow-hidden relative">
 
       <button className="embla__prev absolute top-[25%] -left-5 z-11 bg-[rgba(0,0,0,0.5)] w-6 h-1/2 px-1 rounded-full" onClick={scrollPrev}>
         <img src={ArrowLeft.src} className='w-full' alt="" />
@@ -1407,10 +1407,10 @@ export function MobileSlidesMovies({ data , title }: { data: dataInfo , title: s
     <div className="mt-5 ps-3 lg:mt-10 w-full bg-transparent select-none" >
       <h2 className='text-white md:text-base font-semibold mb-2 ms-1'>{title}</h2>
 
-      <div className="embla relative">
+      <div className="overflow-hidden relative">
 
 
-        <div className='embla__viewport overflow-hidden ' ref={emblaRef}>
+        <div className='overflow-hidden ' ref={emblaRef}>
           <div className="embla__container flex aspect-[10/4.45]">
 
 
@@ -1453,7 +1453,7 @@ export function MobileSlidesTV({ data , title }: { data: dataInfo , title: strin
     <div className="mt-5 ps-3 lg:mt-10 w-full bg-transparent select-none" >
       <h2 className='text-white md:text-base font-semibold mb-2 ms-1'>{title}</h2>
 
-      <div className="embla relative">
+      <div className="overflow-hidden relative">
 
 
         <div className='embla__viewport overflow-hidden ' ref={emblaRef}>

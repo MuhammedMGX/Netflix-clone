@@ -3,14 +3,16 @@
 
 body{
   background-color: #141414 ;
+  overflow: hidden;
 }
 /* #181818 */
 
 .embla {
   overflow: visible;
 }
+  
 .embla__viewport{
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
 }
 .embla__container {
