@@ -5,8 +5,6 @@ import { signInInputs, signUpInputs } from "../../../_interfaces/sign-type";
 import { log } from "console";
 import { NextResponse } from "next/server";
 
-console.log("AUTH0_DOMAIN:", process.env.AUTH0_DOMAIN);
-console.log("AUTH0_CLIENT_ID:", process.env.AUTH0_CLIENT_ID);
 
 
 export async function POST(req: Request) {
@@ -26,7 +24,6 @@ export async function POST(req: Request) {
       }
     });
 
-    console.log("Response from Auth0:", response);
 
 
     return NextResponse.json({ success: true, message: "Sign-up" });

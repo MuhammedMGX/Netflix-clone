@@ -82,10 +82,6 @@ export async function toggleWatchlist(movieId: number, userEmail: string) {
   if (upsertError) {
     console.error("Error upserting watchlist:", upsertError);
   } else {
-    console.log(
-      alreadyInWatchlist
-        ? "Movie removed from watchlist"
-        : "Movie added to watchlist"
-    );
+
   }
 }
