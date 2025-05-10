@@ -3,7 +3,6 @@
 
 body{
   background-color: #141414 ;
-  overflow-x: hidden; 
 }
 /* #181818 */
 
@@ -11,7 +10,7 @@ body{
   overflow: visible;
 }
 .embla__viewport{
-  overflow: visible;
+  overflow: hidden;
   width: 100%;
 }
 .embla__container {
