@@ -219,7 +219,7 @@ export function MobileEmblaCarousel({ data }: { data: dataInfo  }) {
           {data?.results?.slice(0, 5).map((item) =>(
             
               <div key={item.id} onClick={() => openModal(item.id)} className="flex-[0_0_100%] select-none">
-                <Image src={tmdbPosterS+item.poster_path} className='w-full rounded-3xl' alt="" priority width={342} height={513}/>
+                <Image src={tmdbPosterH+item.poster_path} className='w-full rounded-3xl' alt="" priority width={342} height={513}/>
                
                 <div className='flex w-full py-5 sm:px-5'>
                     <button className='w-1/2 flex justify-center items-center rounded-md me-3 text-black px-1 py-1 font-semibold bg-white hover:bg-gray-200 transition'> <Play size={12} color="black" fill="black" strokeWidth={5} className="me-2" /> Play</button>
@@ -414,7 +414,7 @@ export function MobileEmblaCarouselTV({ data }: { data: dataInfo  }) {
           {data?.results?.slice(0, 5).map((item) =>(
             
               <div key={item.id} onClick={() => openModal(item.id)} className="flex-[0_0_100%] select-none">
-                <Image src={tmdbPosterS+item.poster_path} className='w-full rounded-3xl' alt="" priority width={342} height={513}/>
+                <Image src={tmdbPosterH+item.poster_path} className='w-full rounded-3xl' alt="" priority width={342} height={513}/>
                
                 <div className='flex w-full py-5 sm:px-5'>
                     <button className='w-1/2 flex justify-center items-center rounded-md me-3 text-black px-1 py-1 font-semibold bg-white hover:bg-gray-200 transition'> <Play size={12} color="black" fill="black" strokeWidth={5} className="me-2" /> Play</button>
