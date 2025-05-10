@@ -188,7 +188,7 @@ export function MobileEmblaCarousel({ data }: { data: dataInfo  }) {
   }, [emblaApi, onSelect])
 
   return (
-    <div className="embla w-full pt-15 relative px-10 rounded-3xl">
+    <div className="overflow-hidden w-full pt-15 relative px-10 rounded-3xl">
 
       <div className='flex flex-col justify-center  absolute left-4 md:left-10 top-1/2 -translate-y-1/2 z-10'>
         <button className="embla__prev" onClick={scrollPrev}>
@@ -383,7 +383,7 @@ export function MobileEmblaCarouselTV({ data }: { data: dataInfo  }) {
   }, [emblaApi, onSelect])
 
   return (
-    <div className="embla w-full  pt-15 relative px-10 rounded-3xl">
+    <div className="overflow-hidden w-full  pt-15 relative px-10 rounded-3xl">
 
       <div className='flex flex-col justify-center  absolute left-4 md:left-10 top-1/2 -translate-y-1/2 z-10'>
         <button className="embla__prev" onClick={scrollPrev}>
@@ -805,7 +805,7 @@ export function MobilePostersSlides({ data , title }: { data: dataInfo , title: 
       <div className="overflow-hidden relative">
 
 
-        <div className='embla__viewport overflow-hidden ' ref={emblaRef}>
+        <div className=' overflow-hidden ' ref={emblaRef}>
           <div className="embla__container flex aspect-[10/6]">
 
 
@@ -1106,7 +1106,7 @@ export function MobileTop10SlidesMovies({ data , title }: { data: dataInfo , tit
       <div className="overflow-hidden relative">
 
 
-        <div className='embla__viewport overflow-hidden ' ref={emblaRef}>
+        <div className=' overflow-hidden ' ref={emblaRef}>
           <div className="embla__container flex gap-x-10 aspect-[10/3.6] translate-x-[-5%]">
 
 
@@ -1214,7 +1214,7 @@ export function MobileTop10SlidesTV({ data , title }: { data: dataInfo , title: 
       <div className="overflow-hidden relative">
 
 
-        <div className='embla__viewport overflow-hidden ' ref={emblaRef}>
+        <div className='overflow-hidden ' ref={emblaRef}>
           <div className="embla__container flex gap-x-10 aspect-[10/3.6] translate-x-[-5%]">
 
 
@@ -1456,7 +1456,7 @@ export function MobileSlidesTV({ data , title }: { data: dataInfo , title: strin
       <div className="overflow-hidden relative">
 
 
-        <div className='embla__viewport overflow-hidden ' ref={emblaRef}>
+        <div className=' overflow-hidden ' ref={emblaRef}>
           <div className="embla__container flex aspect-[10/4.45]">
 
 

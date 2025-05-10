@@ -44,7 +44,7 @@ export default async function Home() {
 
     <div>
       {isMobile ? null : <ContinueWatchingMovies data={nowPlaying} /> }
-    </div>
+    </div> 
 
   
 
