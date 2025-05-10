@@ -95,7 +95,7 @@ if (movie){
         <div className="relative">
 
           {mobile ? 
-          <img src={tmdbPosterH+movie?.poster_path} alt={movie?.title} className='rounded-lg' /> 
+          <>{movie.poster_path? <img className='object-cover rounded-lg' src={tmdbDropS+movie.poster_path} alt="" /> : <div className="flex w-full aspect-[5/8]"><Skeleton className=" w-full rounded-xl object-cover rounded-xs" /></div> }</>
           : 
 
           <div> 

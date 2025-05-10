@@ -100,7 +100,8 @@ export default function MovieModal({ tvId, onClose, mobile }: Props) {
         <div className="relative">
 
           {mobile ? 
-          <img src={tmdbPosterH+tv?.poster_path} alt={tv?.title} className='rounded-lg' /> 
+          <>{tv.poster_path? <img className='object-cover rounded-lg' src={tmdbDropS+tv.poster_path} alt="" /> : <div className="flex w-full aspect-[5/8]"><Skeleton className=" w-full rounded-xl object-cover rounded-xs" /></div> }</>
+          
           : 
 
           <div> 

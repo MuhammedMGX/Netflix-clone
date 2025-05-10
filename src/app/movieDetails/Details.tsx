@@ -72,7 +72,9 @@ if (data){
         <div className="relative">
 
   
-          <img src={tmdbPosterH+data?.poster_path} alt={data?.title} className='rounded-lg block md:hidden' /> 
+          <div className='rounded-lg block md:hidden'>{data.poster_path? <img className='object-cover rounded-lg' src={tmdbDropS+data.poster_path} alt="" /> : <div className="flex w-full aspect-[5/8]"><Skeleton className=" w-full rounded-xl object-cover rounded-xs" /></div> }</div>
+          
+
            
           <img src={tmdbDropH+data?.backdrop_path} alt={data?.title} className='rounded-lg hidden md:block' />
      
