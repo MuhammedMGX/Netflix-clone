@@ -122,7 +122,7 @@ export default function MovieModal({ tvId, onClose, mobile }: Props) {
 
 
             :
-            <img src={tmdbDropH+tv?.backdrop_path} alt={tv?.title} className='rounded-lg' />
+            <>{tv.backdrop_path? <img className='object-cover rounded-lg' src={tmdbDropS+tv.backdrop_path} alt={tv?.title} /> : <div className="flex w-full aspect-[8/4.5]"><Skeleton className=" w-full object-cover rounded-lg" /></div> }</>
             }
 
           </div>

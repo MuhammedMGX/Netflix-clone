@@ -27,7 +27,7 @@ export default function Search() {
   
   return (
     <>
-      <div className="pt-25 mb-5 w-2/3 md:w-1/2 mx-auto">
+      <div className="pt-25 mb-5 w-[90%] md:w-1/2 mx-auto">
         <form onSubmit={handleSubmit} className="flex gap-2 items-center h-12">
           <Input
             className="h-full rounded-full placeholder:ps-5 placeholder:font-bold text-white font-bold ps-5 border-2 border-gray-500 selection:bg-white selection:text-black focus:outline-none focus:ring-none "

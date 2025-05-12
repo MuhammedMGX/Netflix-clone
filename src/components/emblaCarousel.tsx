@@ -1610,7 +1610,7 @@ export function MobileMyListE({ MovieData , TvData , isMobile }: { MovieData: an
       
         <h2 className='text-white text-base md:text-2xl font-semibold mb-2 md:mb-10 px-1 md:px-10'>My List</h2>
 
-      <div className="flex flex-wrap px-1 md:px-10 justify-center">
+      <div className="flex flex-wrap px-1 gap-y-2 md:px-10 justify-center">
 
 
       {MovieData?.map((item:any) =>(
