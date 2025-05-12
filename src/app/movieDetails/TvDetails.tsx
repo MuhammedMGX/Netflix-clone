@@ -167,39 +167,32 @@ export default function MovieModal({ tvId, onClose, mobile }: Props) {
 
 
         <h3 className='px-10 text-white font-bold text-xl'>More Like This</h3>
+
         <div className='flex flex-wrap p-8 pb-20 text-white'>
-
-
-
-        {tvRecommendations?.results?.slice(0, 9).map((item : movieDataInfo) =>(
-
-          <div key={item.id} className="sm:w-1/2 md:w-1/3 xl-1/5 relative">
-
-          <div className='m-2 bg-[#2F2F2F] rounded-sm h-90'>
-          <div className="flex flex-col">
-          <img className='object-cover rounded-t-sm' src={tmdbDropS+item.backdrop_path} alt="" />
-
-          <div className='w-full px-4 rounded-xs'>
-              <div className='flex items-center aspect-[10/2] mt-2'>
-              <p className='text-white font-semibold break-words drop-shadow-2xl'>{item.title ? item.title : item.name}</p>
-              <img src={plus.src} className='object-cover p-0.5 ms-auto' alt="" />
-              </div>
-
-              <p className='text-gray-400 py-3 text-sm font-semibold'>{item.overview.split(" ").slice(0, 20).join(" ")}</p>
+          {tvRecommendations?.results?.slice(0, 9).map((item : movieDataInfo) =>(
+  
+            <div key={item.id} className="sm:w-1/2 md:w-1/3 xl-1/5 relative">
+  
+            <div className='m-2 bg-[#2F2F2F] rounded-sm h-90'>
+            <div className="flex flex-col">
+            <img className='object-cover rounded-t-sm' src={tmdbDropS+item.backdrop_path} alt="" />
+  
+            <div className='w-full px-4 rounded-xs'>
+                <div className='flex items-center aspect-[10/1.5] mt-3'>
+                <p className='text-white font-semibold break-words drop-shadow-2xl w-3/4'>{item.title ? item.title : item.name}</p>
+                <div className='ms-auto w-1/4 p-2'>{userEmail ? (<TvWatchlistButton tvId={item.id} userEmail={userEmail} />) : ( <p>Please log in to manage your watchlist.</p>)}</div>
+                </div>
+  
+                <p className='text-gray-400 py-3 text-sm font-semibold'>{item.overview.split(" ").slice(0, 20).join(" ")}</p>
+            </div>
+  
+            </div>
+            </div>
+  
+            </div>
+          ))}
           </div>
 
-          </div>
-          </div>
-
-          </div>
-
-        ))}
-
-
-        </div>
-
-
-        
 
     </div>
     </div>
