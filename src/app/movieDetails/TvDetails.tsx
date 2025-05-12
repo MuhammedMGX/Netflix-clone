@@ -104,11 +104,11 @@ export default function MovieModal({ tvId, onClose, mobile }: Props) {
           
           : 
 
-          <div> 
+          <div className='aspect-[8/4.5] relative'> 
             {showVideo? 
 
             <iframe
-            className='w-full rounded-lg'
+            className='w-full h-full rounded-lg'
             width="100%"
             height="490"
             src={URL}
@@ -122,7 +122,7 @@ export default function MovieModal({ tvId, onClose, mobile }: Props) {
 
 
             :
-            <>{tv.backdrop_path? <img className='object-cover rounded-lg' src={tmdbDropS+tv.backdrop_path} alt={tv?.title} /> : <div className="flex w-full aspect-[8/4.5]"><Skeleton className=" w-full object-cover rounded-lg" /></div> }</>
+            <>{tv.backdrop_path? <img className='object-cover w-full rounded-lg aspect-[8/4.5]' src={tmdbDropS+tv.backdrop_path} alt={tv?.title} /> : <div className="flex w-full aspect-[8/4.5]"><Skeleton className=" w-full object-cover rounded-lg" /></div> }</>
             }
 
           </div>
@@ -131,7 +131,7 @@ export default function MovieModal({ tvId, onClose, mobile }: Props) {
 
 
 
-          <div className="pointer-events-none absolute bottom-0 left-0 right-0 w-full h-32 bg-gradient-to-t from-[#141414] to-transparent"></div>
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 w-full h-35 bg-gradient-to-t from-[#141414] to-transparent"></div>
 
             <div className='flex flex-col justify-end w-full h-full absolute top-0 bottom-0 left-0 right-0 px-13 pb-10 z-[80]'>           
               <h1 className='w-1/2 text-white text-xl md:text-6xl font-extrabold break-normal'>{tv?.title ? tv?.title : tv?.name}</h1>

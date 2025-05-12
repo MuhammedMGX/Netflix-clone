@@ -82,7 +82,7 @@ if (data){
 
 
 
-          <div className="pointer-events-none absolute bottom-0 left-0 right-0 w-full h-32 bg-gradient-to-t from-[#141414] to-transparent"></div>
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 w-full h-35 bg-gradient-to-t from-[#141414] to-transparent"></div>
 
             <div className='flex flex-col justify-end w-full h-full absolute top-0 bottom-0 left-0 right-0 px-13 pb-10 z-[80]'>           
               <h1 className='w-1/2 text-white text-xl md:text-6xl font-extrabold break-normal'>{data?.title ? data?.title : data?.name}</h1>

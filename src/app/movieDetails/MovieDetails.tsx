@@ -96,11 +96,11 @@ if (movie){
           <>{movie.poster_path? <img className='object-cover rounded-lg' src={tmdbDropS+movie.poster_path} alt="" /> : <div className="flex w-full aspect-[5/8]"><Skeleton className=" w-full rounded-xl object-cover rounded-xs" /></div> }</>
           : 
 
-          <div> 
+          <div className='aspect-[8/4.5] relative'> 
             {showVideo? 
 
             <iframe
-            className='w-full'
+            className='w-full h-full rounded-lg'
             width="100%"
             height="490"
             src={URL}
@@ -113,7 +113,7 @@ if (movie){
 
             :
             
-            <>{movie.backdrop_path? <img className='object-cover rounded-lg' src={tmdbDropS+movie.backdrop_path} alt={movie?.title} /> : <div className="flex w-full aspect-[8/4.5]"><Skeleton className=" w-full object-cover rounded-lg" /></div> }</>
+            <>{movie.backdrop_path? <img className='object-cover w-full rounded-lg' src={tmdbDropS+movie.backdrop_path} alt={movie?.title} /> : <div className="flex w-full aspect-[8/4.5]"><Skeleton className=" w-full object-cover rounded-lg" /></div> }</>
 
             }
 
@@ -123,7 +123,7 @@ if (movie){
 
 
 
-          <div className="pointer-events-none absolute bottom-0 left-0 right-0 w-full h-32 bg-gradient-to-t from-[#141414] to-transparent"></div>
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 w-full h-35 bg-gradient-to-t from-[#141414] to-transparent"></div>
 
             <div className='flex flex-col justify-end w-full h-full absolute top-0 bottom-0 left-0 right-0 px-13 pb-10 z-[80]'>           
               <h1 className='w-1/2 text-white text-xl md:text-6xl font-extrabold break-normal'>{movie?.title ? movie?.title : movie?.name}</h1>
