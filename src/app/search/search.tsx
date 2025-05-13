@@ -40,7 +40,6 @@ export default function SearchPage(trending : any) {
         </form>
         
       </div>
-        { resultsData ? null :<h2 className="text-white p-2">Not found!</h2>}
         
 
     {resultsData?.results.length > 0 ? 
@@ -51,7 +50,7 @@ export default function SearchPage(trending : any) {
 
     :
 
-      <div className="mt-15">
+      <div className="mt-10">
         <SearchE data={trending.data} isMobile={false} titleH="" />
       </div>
     
