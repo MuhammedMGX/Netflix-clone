@@ -9,15 +9,20 @@ export default withAuth(
         const pathname = request.nextUrl.pathname;       
         const isAuth = await getToken({ req: request });
         const isAuthRoute = pathname.startsWith('/auth');
-        const protectedRoutes = ['/profile' , '/home'];
+        const protectedRoutes = ['/profile' , '/home' , '/movies' , '/tvshows' , '/new&popular' , '/mylist' , '/browse' , '/search'];
         const isProtectedRoute = protectedRoutes.some((route) => pathname.startsWith(route));
 
 
-        
+        if (!isAuth && pathname === "/") {
+          return NextResponse.redirect(new URL('/auth/landingpage', request.url));
+        }else if(isAuth && pathname === "/"){
+          return NextResponse.redirect(new URL('/home', request.url));
+        }
+
         if (!isAuth && isProtectedRoute) {
             return NextResponse.redirect(new URL('/auth/landingpage', request.url));
-
         }
+
         if (isAuth && isAuthRoute) {
             return NextResponse.redirect(new URL('/home', request.url));
         }
@@ -37,7 +42,7 @@ export default withAuth(
  
  
 export const config = {
-  matcher: ['/profile/:path*', '/auth/:path*' , '/home' , '/'],
+  matcher: ['/profile/:path*', '/auth/:path*' , '/home' , '/' , '/movies' , '/tvshows' , '/new&popular' , '/mylist' , '/browse' , '/search'],
 }
 
 
